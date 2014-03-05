@@ -1,6 +1,4 @@
----
 language: ruby
-script: bundle exec middleman build
 
 env:
   global:
@@ -11,14 +9,16 @@ env:
     - secure: mFEiIG+VUmacnESZnzpbzn9DVEl8SVK8hp5sRH2zMiiK5hIQUfXcQM91Cl6HtRLCCngh7Pl+Vsk+Mwm+WA+dFtKt+5T2vwT08OdMNdtNlHgEcoQEEkrfTmyHM38U71Pl/OITAAnB8KsVAT+xJTf+U6pd/bylsDiP8aMUKS7ghVE=
 
 before_script:
-  - git clone --quiet http://github.com/turusuke/middleman-build-test.git build
-  - pushd build
-  - git checkout -b gh-pages
-  - popd
+    - git clone --quiet http://github.com/turusuke/middleman-build-test.git build
+    - pushd build
+    - git checkout -b gh-pages
+    - popd
+
+script:
+    - bundle exec middleman build
 
 after_success:
-  - cd build
-  - git add -A
-  - git commit -m 'Update'
-  - '[ "$TRAVIS_BRANCH" == "master" ] && [ $GH_TOKEN ] && git push --quiet https://$GH_TOKEN@github.com/turusuke/middleman-build-test.git gh-pages 2> /dev/null'
-  
+    - cd build
+    - git add -A
+    - git commit -m 'Update'
+    - '[ "$TRAVIS_BRANCH" == "master" ] && [ $GH_TOKEN ] && git push --quiet https://$GH_TOKEN@github.com/turusuke/middleman-build-test.git gh-pages 2> /dev/null'
