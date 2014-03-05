@@ -6,7 +6,7 @@ env:
     - GIT_COMMITTER_EMAIL=mail@turusuke.com
     - GIT_AUTHOR_NAME=turusuke
     - GIT_AUTHOR_EMAIL=mail@turusuke.com
-    - secure: mFEiIG+VUmacnESZnzpbzn9DVEl8SVK8hp5sRH2zMiiK5hIQUfXcQM91Cl6HtRLCCngh7Pl+Vsk+Mwm+WA+dFtKt+5T2vwT08OdMNdtNlHgEcoQEEkrfTmyHM38U71Pl/OITAAnB8KsVAT+xJTf+U6pd/bylsDiP8aMUKS7ghVE=
+    - secure: dt/Tk/atT4kOuJpD1EHVO350NJgeE6RNOtf6zIMeHzNoRSFMzOLnb3Z2Z29zaGsupOWx1sw8AdPp9LTuLktW0mlxlwymdegVz6Iu3cXpohwqEtAHNk8MTPEHbnirBvL3jmrhM6ior1cdMnPqBv0Fa/5ABWJFb7HN6oKNSvSGlK4=
 
 before_script:
     - git clone --quiet http://github.com/turusuke/middleman-build-test.git build
